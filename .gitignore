@@ -1,0 +1,14 @@
+# Dependencies
+node_modules
+package-lock.json
+*.log
+
+# Build Files
+dist/
+build/
+
+# Environment Files
+.env
+
+# Misc
+.DS_Store
