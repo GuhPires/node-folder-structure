@@ -17,8 +17,8 @@
 // You can improve it by using the Pub/Sub (Observer) design pattern
 // to improve the separations of concerns of the application (See
 // the 'Subscribers' folder to an example).
-const events = require('events');
-const eventEmitter = new events.EventEmitter();
+const Emitter = require('../Subscribers');
+const emitter = new Emitter();
 
 module.exports = class Service {
 	constructor(model) {
@@ -30,7 +30,7 @@ module.exports = class Service {
 		console.log('SERVICE GET -> Doing stuff...');
 		const response = await this.model.find();
 		// Here is a good place to emit an event
-		eventEmitter.emit('customEvent', response);
+		emitter.emit('customEvent', response);
 		return { msg: 'Here is some data...', data: response };
 	}
 
@@ -39,7 +39,7 @@ module.exports = class Service {
 		console.log('SERVICE CREATE -> Doing stuff...');
 		const response = await this.model.create();
 		// Here is a good place to emit an event
-		eventEmitter.emit('customEvent', response);
+		emitter.emit('customEvent', response);
 		return { msg: 'Here is some data...', data: response };
 	}
 
@@ -48,7 +48,7 @@ module.exports = class Service {
 		console.log('SERVICE UPDATE -> Doing stuff...');
 		const response = await this.model.update();
 		// Here is a good place to emit an event
-		eventEmitter.emit('customEvent', response);
+		emitter.emit('customEvent', response);
 		return { msg: 'Here is some data...', data: response };
 	}
 
@@ -57,7 +57,7 @@ module.exports = class Service {
 		console.log('SERVICE DELETE -> Doing stuff...');
 		const response = await this.model.destroy();
 		// Here is a good place to emit an event
-		eventEmitter.emit('customEvent', response);
+		emitter.emit('customEvent', response);
 		return { msg: 'Here is some data...', data: response };
 	}
 };

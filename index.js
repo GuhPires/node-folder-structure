@@ -4,6 +4,8 @@ const app = express();
 const apiRoutes = require('./Routes');
 // Configuration
 const KEYS = require('./Config/keys');
+// Subscribers
+require('./Subscribers/email').subscribe();
 
 // Middlewares
 // Request interceptor (it'll run before every request for every route)
