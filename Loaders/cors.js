@@ -8,6 +8,7 @@ module.exports = (app) => {
 	// CORS options (see https://www.npmjs.com/package/cors)
 	const options = {
 		origin: whitelist,
+		// Any other headers...
 	};
 	// Enabling CORS pre-flight
 	app.options('*', cors(options));
