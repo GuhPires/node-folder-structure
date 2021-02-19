@@ -1,5 +1,4 @@
 // This file loads all necessary middlewares and server's pre-start functions
-
 const cors = require('./cors');
 
 module.exports = {
