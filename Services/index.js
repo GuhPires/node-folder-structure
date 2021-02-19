@@ -17,7 +17,7 @@
 // You can improve it by using the Pub/Sub (Observer) design pattern
 // to improve the separations of concerns of the application (See
 // the 'Subscribers' folder to an example).
-const Emitter = require('../Subscribers');
+const Emitter = require('../Helpers/Emitter');
 const emitter = new Emitter();
 
 module.exports = class Service {

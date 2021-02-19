@@ -4,8 +4,9 @@ const app = express();
 const apiRoutes = require('./Routes');
 // Configuration
 const KEYS = require('./Config/keys');
-// Subscribers
-require('./Subscribers/email').subscribe();
+
+// Loaders
+require('./Loaders').load(app);
 
 // Middlewares
 // Request interceptor (it'll run before every request for every route)
@@ -34,6 +35,9 @@ app
 	.use('/api', apiRoutes)
 	.use(errorHandler);
 
+// Subscribers
+require('./Subscribers/email.sub').subscribe();
+
 // Handling all unknown routes (main application)
 app.all('*', async (req, res) => {
 	res.status(404).send('PAGE NOT FOUND!');
@@ -41,7 +45,7 @@ app.all('*', async (req, res) => {
 
 // Starting the server
 app.listen(KEYS.PORT, () => {
-	console.log('========================');
+	console.log('------------------------');
 	console.log('PORT: ', KEYS.PORT);
 	console.log('PID: ', process.pid);
 	console.log('========================');

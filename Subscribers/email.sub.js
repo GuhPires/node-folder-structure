@@ -1,4 +1,4 @@
-const Emitter = require('../Subscribers');
+const Emitter = require('../Helpers/Emitter');
 const emitter = new Emitter();
 
 // Event functionality
