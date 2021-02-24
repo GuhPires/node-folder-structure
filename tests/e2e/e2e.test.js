@@ -1,4 +1,4 @@
-describe('User tests', () => {
+describe('E2E tests', () => {
 	test('should pass', () => {
 		expect(true).toBe(true);
 	});

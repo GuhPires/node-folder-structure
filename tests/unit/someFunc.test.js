@@ -1,4 +1,4 @@
-describe('User tests', () => {
+describe('Some function tests', () => {
 	test('should pass', () => {
 		expect(true).toBe(true);
 	});
