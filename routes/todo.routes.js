@@ -1,4 +1,4 @@
-const TodoController = require('../Controllers/todo.controller');
+const TodoController = require('../controllers/todo.controller');
 
 module.exports = (router) => {
 	const urlPath = '/todo';

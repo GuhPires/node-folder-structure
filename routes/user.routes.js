@@ -1,4 +1,4 @@
-const UserController = require('../Controllers/user.controller');
+const UserController = require('../controllers/user.controller');
 
 module.exports = (router) => {
 	const urlPath = '/user';

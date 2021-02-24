@@ -1,7 +1,7 @@
 const Controller = require('./index');
-const TodoService = require('../Services/todo.service');
+const UserService = require('../services/user.service');
 
-class TodoController extends Controller {
+class UserController extends Controller {
 	constructor(service) {
 		super(service);
 	}
@@ -13,4 +13,4 @@ class TodoController extends Controller {
 	// own logic when overriding it.
 }
 
-module.exports = new TodoController(TodoService);
+module.exports = new UserController(UserService);

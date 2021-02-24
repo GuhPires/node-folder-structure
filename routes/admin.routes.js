@@ -1,5 +1,5 @@
 const adminController = require('../Controllers/admin.controller');
-const AdminController = require('../Controllers/admin.controller');
+const AdminController = require('../controllers/admin.controller');
 
 module.exports = (router) => {
 	const urlPath = '/admin';

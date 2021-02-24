@@ -8,7 +8,7 @@
 // be done. OBS: If you're using some ORM you probably won't need this
 // 'index.js' file.
 
-const Seed = require('../Data/seed');
+const Seed = require('../data/seed');
 
 module.exports = class Model {
 	constructor(collection) {

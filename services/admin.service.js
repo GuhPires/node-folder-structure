@@ -1,7 +1,7 @@
 const Service = require('./index');
-const User = require('../Models/User');
+const Admin = require('../models/Admin');
 
-class UserService extends Service {
+class AdminService extends Service {
 	constructor(model) {
 		super(model);
 	}
@@ -13,4 +13,4 @@ class UserService extends Service {
 	// own logic when overriding it.
 }
 
-module.exports = new UserService(User);
+module.exports = new AdminService(Admin);
